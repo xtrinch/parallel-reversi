@@ -16,6 +16,8 @@ Run with:
 
     $ ./a.out
 
+For compilation of the MPI version, is to use mpicc instead of g++, for inclusion of the MPI libraries.
+
 ## Human vs computer pthreads output example
 
 ```
