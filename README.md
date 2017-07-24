@@ -21,7 +21,7 @@ For compilation of the MPI version, is to use mpicc instead of g++, for inclusio
 ## Human vs computer pthreads output example
 
 ```
-$ .\a.exe
+$ ./a.out
 -------START-------
   -1-2-3-4-5-6-7-8
 1|                |
