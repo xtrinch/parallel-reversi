@@ -168,8 +168,8 @@ int humanMove(char *board, int player_color) {
 		return 0;
 	do {
 		printf("Input row and column ([1..8]<Enter>[1..8]):\n");
-		scanf_s("%d", &row);
-		scanf_s("%d", &column);
+		scanf("%d", &row);
+		scanf("%d", &column);
 		printf("\n");
 		row -= 1;
 		column -= 1;
@@ -547,9 +547,15 @@ int main(int argc, char* argv[]) {
 
 			printBoard(board);
 			printf("\nPlayer O:\n");
-			if (!computerRandomMove(board, player2, 1)) {
-				breakWhile = 1;
-			}
+			#ifdef USER	
+				if (!humanMove(board, player2)) {
+					breakWhile = 1;
+				}
+			#else	
+				if (!computerRandomMove(board, player2, 1)) {
+					breakWhile = 1;
+				}
+			#endif
 			printBoard(board);
 		}
 
